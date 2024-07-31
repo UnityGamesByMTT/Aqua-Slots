@@ -551,26 +551,26 @@ public class SlotBehaviour : MonoBehaviour
                 }
 
                 break;
-            case 2:
+            case 3:
                 for (int i = 0; i < J_Sprite.Length; i++)
                 {
                     animScript.textureArray.Add(J_Sprite[i]);
                 }
 
                 break;
-            case 3:
+            case 4:
                 for (int i = 0; i < K_Sprite.Length; i++)
                 {
                     animScript.textureArray.Add(K_Sprite[i]);
                 }
                 break;
-            case 4:
+            case 5:
                 for (int i = 0; i < Q_Sprite.Length; i++)
                 {
                     animScript.textureArray.Add(Q_Sprite[i]);
                 }
                 break;
-            case 5:
+            case 2:
                 for (int i = 0; i < A_Sprite.Length; i++)
                 {
                     animScript.textureArray.Add(A_Sprite[i]);
@@ -780,15 +780,15 @@ public class SlotBehaviour : MonoBehaviour
             bonus_Controller.FinishBonusGame();
 
         }
-        else if (SocketManager.resultData.WinAmout >= bet * 5 && SocketManager.resultData.WinAmout < bet * 10 && SocketManager.resultData.jackpot == 0)
+        else if (SocketManager.resultData.WinAmout >= currentTotalBet * 10 && SocketManager.resultData.WinAmout < currentTotalBet * 15 && SocketManager.resultData.jackpot == 0)
         {
             uiManager.PopulateWin(1, SocketManager.resultData.WinAmout);
         }
-        else if (SocketManager.resultData.WinAmout >= bet * 10 && SocketManager.resultData.WinAmout < bet * 15 && SocketManager.resultData.jackpot == 0)
+        else if (SocketManager.resultData.WinAmout >= currentTotalBet * 15 && SocketManager.resultData.WinAmout < currentTotalBet * 20 && SocketManager.resultData.jackpot == 0)
         {
             uiManager.PopulateWin(2, SocketManager.resultData.WinAmout);
         }
-        else if (SocketManager.resultData.WinAmout >= bet * 15 && SocketManager.resultData.jackpot == 0)
+        else if (SocketManager.resultData.WinAmout >= currentTotalBet * 20 && SocketManager.resultData.jackpot == 0)
         {
             uiManager.PopulateWin(3, SocketManager.resultData.WinAmout);
         }
